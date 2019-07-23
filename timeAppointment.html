@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>预约时间</title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/font/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/com.css"/>
+		<link rel="stylesheet" type="text/css" href="css/timeAppointment.css"/>
+	</head>
+	<body>
+		<script type="text/javascript">
+			(function (doc, win) {
+		    // 分辨率Resolution适配
+		    var docEl = doc.documentElement,
+	        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	        recalc = function () {
+	            var clientWidth = docEl.clientWidth;
+	            if (!clientWidth) return;
+	            docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+	        };
+		    // Abort if browser does not support addEventListener
+		    if (!doc.addEventListener) return;
+		    win.addEventListener(resizeEvt, recalc, false);
+		    doc.addEventListener('DOMContentLoaded', recalc, false);
+		    
+		    // 一物理像素在不同屏幕的显示效果不一样。要根据devicePixelRatio来修改meta标签的scale,要注释上面的meta标签
+		    (function(){
+	        	return;
+	        	var dpr = scale =1;
+	         	var isIPhone = win.navigator.appVersion.match(/iphone/gi);
+	        	var devicePixelRatio = win.devicePixelRatio;
+		        if (isIPhone) {
+		            // iOS下，对于2和3的屏，用2倍的方案，其余的用1倍方案
+		            if (devicePixelRatio >= 3 && (!dpr || dpr >= 3)) {                
+		                dpr = 3;
+		            } else if (devicePixelRatio >= 2 && (!dpr || dpr >= 2)){
+		                dpr = 2;
+		            } else {
+		                dpr = 1;
+		            }
+		        } else {
+		            // 其他设备下，仍旧使用1倍的方案
+		            dpr = 1;
+		        }
+	          	 scale = 1 / dpr;
+	           
+	           	// 
+	          	var metaEl = "";
+	           	metaEl = doc.createElement('meta');
+	       		metaEl.setAttribute('name', 'viewport');
+		        metaEl.setAttribute('content', 'initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+		        if (docEl.firstElementChild) {
+		            docEl.firstElementChild.appendChild(metaEl);
+		        } else {
+		            var wrap = doc.createElement('div');
+		            wrap.appendChild(metaEl);
+		            doc.write(wrap.innerHTML);
+		        }
+	    	})();
+		        
+			})(document, window);
+		</script>
+		<div class="mui-content">
+			<div class="mui-doc-user">
+				<h4>主任医师: 王魏</h4>
+				<p>耳畸形无创矫正手术</p>
+			</div>
+			
+			<div class="mui-week-select">
+				<div class="mui-week-select-div mui-active" data-name='1'><a href="###">周一</a></div>
+				<div class="mui-week-select-div" data-name='2'><a href="###">周二</a></div>
+				<div class="mui-week-select-div" data-name='3'><a href="###">周三</a></div>
+				<div class="mui-week-select-div" data-name='4'><a href="###">周四</a></div>
+				<div class="mui-week-select-div" data-name='5'><a href="###">周五</a></div>
+				<div class="mui-week-select-div" data-name='6'><a href="###">周六</a></div>
+				<div class="mui-week-select-div" data-name='0'><a href="###">周日</a></div>
+			</div>
+			
+			<div class="mui-data-time">
+				<p id="muiDataTime">2019-04-23</p>
+			</div>
+			
+			<div class="mui-scroll-box">
+				<div class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						
+						<div class="mui-scroll-list" state-data='1'>
+							<div class="mui-input-row mui-checkbox">
+								<input name="checkbox1" value="Item 1" disabled="disabled" type="checkbox">
+							 	<span class="time">14:00</span>
+							</div>
+							<div class="mui-scroll-state">
+								预约已满
+							</div>
+						</div>
+						
+						<div class="mui-scroll-list">
+							<div class="mui-input-row mui-checkbox">
+								<input name="checkbox1" value="Item 1" disabled="disabled"  type="checkbox" >
+							 	<span class="time">14:30</span>
+							</div>
+							<div class="mui-scroll-state">
+								
+							</div>
+						</div>
+						
+						<div class="mui-scroll-list">
+							<div class="mui-input-row mui-checkbox">
+								<input name="checkbox1" value="Item 1" disabled="disabled"  type="checkbox">
+							 	<span class="time">15:00</span>
+							</div>
+							<div class="mui-scroll-state">
+								
+							</div>
+						</div>
+						
+						<div class="mui-scroll-list" state-data='1'>
+							<div class="mui-input-row mui-checkbox">
+								<input name="checkbox1" value="Item 1" disabled="disabled"   type="checkbox" disabled="disabled">
+							 	<span class="time">15:30</span>
+							</div>
+							<div class="mui-scroll-state">
+								预约已满
+							</div>
+						</div>
+						
+						<div class="mui-scroll-list"  state-data='1'>
+							<div class="mui-input-row mui-checkbox">
+								<input name="checkbox1" value="Item 1" disabled="disabled" type="checkbox" disabled="disabled">
+							 	<span class="time">16:00</span>
+							</div>
+							<div class="mui-scroll-state">
+								预约已满
+							</div>
+						</div>
+						
+						<div class="mui-scroll-list">
+							<div class="mui-input-row mui-checkbox">
+								<input name="checkbox1" value="Item 1" disabled="disabled"  type="checkbox" checked>
+							 	<span class="time">16:30</span>
+							</div>
+							<div class="mui-scroll-state">
+								
+							</div>
+						</div>
+						
+						<div class="mui-scroll-list">
+							<div class="mui-input-row mui-checkbox">
+								<input name="checkbox1" value="Item 1" disabled="disabled"  type="checkbox" >
+							 	<span class="time">17:30</span>
+							</div>
+							<div class="mui-scroll-state">
+								
+							</div>
+						</div>
+						
+						<div class="mui-scroll-list">
+							<div class="mui-input-row mui-checkbox">
+								<input name="checkbox1" value="Item 1" disabled="disabled"  type="checkbox" >
+							 	<span class="time">14:00</span>
+							</div>
+							<div class="mui-scroll-state">
+								
+							</div>
+						</div>
+						
+						<div class="mui-scroll-list">
+							<div class="mui-input-row mui-checkbox">
+								<input name="checkbox1" value="Item 1" disabled="disabled"  type="checkbox" >
+							 	<span class="time">14:00</span>
+							</div>
+							<div class="mui-scroll-state">
+								
+							</div>
+						</div>
+						
+						<div class="mui-scroll-list">
+							<div class="mui-input-row mui-checkbox">
+								<input name="checkbox1" value="Item 1" disabled="disabled" type="checkbox" >
+							 	<span class="time">14:00</span>
+							</div>
+							<div class="mui-scroll-state">
+								
+							</div>
+						</div>
+						
+						<div class="mui-scroll-list">
+							<div class="mui-input-row mui-checkbox">
+								<input name="checkbox1" value="Item 1" disabled="disabled" type="checkbox" >
+							 	<span class="time">14:00</span>
+							</div>
+							<div class="mui-scroll-state">
+								
+							</div>
+						</div>
+						
+						<div class="mui-scroll-list">
+							<div class="mui-input-row mui-checkbox">
+								<input name="checkbox1" value="Item 1" disabled="disabled" type="checkbox">
+							 	<span class="time">14:00</span>
+							</div>
+							<div class="mui-scroll-state">
+								
+							</div>
+						</div>
+						 
+					</div>
+				</div>
+			</div>
+			
+			<!--情况说明-->
+			<div class="situation-description">
+				情况说明
+			</div>
+			
+			<!--情况输入-->
+			<div class="situation-description-textarea">
+				<textarea name="" onfocus="focusChange()" onblur="BlurChange()" oninput="specChange()" id="spec" maxlength="360" rows="5" cols="5">请输入您的情况</textarea><span><i id="specSpan">0</i>/360</span>
+			</div>
+			
+			<!--时间确定-->
+			<div class="mui-time-sure">
+				<div><span class="icon iconfont icon-shijian"></span>预约时间：周一 14:30</div>
+				<div id="sureBtn">提交预约</div>
+			</div>
+		</div>
+		
+		<script src="js/lib/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.min.js"></script>
+		<script src="js/com.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/timeAppointment.js"></script>
+	</body>
+</html>

@@ -1,0 +1,73 @@
+.mui-content{
+	background: #F9F9FB;
+	width: 100%;
+	
+}
+.mui-doc-content-list{
+	width: 100%;
+	display: flex;
+	background: #fff;
+	border-bottom: 1px solid rgba(238,238,238,1);
+	padding: 0.32rem 0.24rem;
+}
+..mui-doc-content div{
+	flex: auto;
+}
+
+.mui-doc-content-user-img img{
+	width: 1.8rem;
+	height: 1.8rem;
+	border:1px solid rgba(112,112,112,0);
+	opacity:1;
+	border-radius:8px;
+}
+
+.mui-doc-content-user-name p:nth-of-type(1){
+	font-size:0.32rem;
+	margin-left: 0.32rem;
+	font-family:Microsoft YaHei;
+	font-weight:400;
+	line-height:0.42rem;
+	color:rgba(0,0,0,1);
+	opacity:1
+}
+
+.mui-doc-content-user-name p:nth-of-type(2){
+	margin: 0;
+	margin-top: 0.8rem;
+}
+.mui-doc-content-user-name p:nth-of-type(2) span{
+	width:1rem;
+	display: inline-block;
+	background:rgba(77,182,255,0);
+	border:1px solid rgba(63,112,150,1);
+	opacity:1;
+	border-radius:4px;
+	text-align: center;
+	margin-left: 0.32rem;
+	line-height: 0.4rem;
+	font-size:0.2rem;
+	font-family:Microsoft YaHei;
+	font-weight:400;
+	color:rgba(63,112,150,1);
+	opacity:1;
+	
+}
+.mui-doc-make-an-appointment{
+	text-align: right;
+	flex: 3;
+}
+.mui-doc-make-an-appointment button{
+	width:1rem;
+	height:0.56rem;
+	border:1px solid rgba(77,188,255,0);
+	background:linear-gradient(270deg,rgba(61,110,149,1) 0%,rgba(81,130,161,1) 100%);
+	border-radius:4px;
+	font-size:0.28rem;
+	font-family:Microsoft YaHei;
+	font-weight:400;
+	line-height:0.3rem;
+	color:rgba(255,255,255,1);
+	opacity:1;
+	margin-top: 1.08rem;
+}

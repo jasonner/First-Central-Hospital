@@ -1,0 +1,166 @@
+.ui-page-login,
+body,html{
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	font-size: 20px;
+}
+.mui-content{
+	height: 100%;
+	border:1px solid rgba(112,112,112,0);
+    background:linear-gradient(135deg,rgba(82,131,161,1) 0%,rgba(59,108,148,1) 100%);
+}
+.reg-box{
+	width: 93.6%;
+	padding: 0 0.51rem;
+	background:rgba(255,255,255,1);
+	border:1px solid rgba(112,112,112,0);
+	opacity:1;
+	border-radius:0.4rem;
+	margin: 0 auto;
+	margin-top: 1.325rem;
+	border-radius: 0.2rem;
+}
+
+.loging-img{
+	width: 1.6rem;
+	height: 1.6rem;
+	margin: 0 auto;
+	margin-top: 0.47rem;
+	background: #FAFAFA;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 100%;
+}
+.loging-img img{
+	width: 1.6rem;
+	height: 1.6rem;
+}
+
+.reg-content-title{
+	font-size:0.32rem;
+	font-family:Microsoft YaHei;
+	font-weight:400;
+	line-height:0.42rem;
+	color:rgba(29,29,29,1);
+	opacity:1;
+	text-align: center;
+	margin-top: 0.32rem;
+}
+.reg-content-phone{
+	width:5.9rem;
+	margin-top: 0.65rem;
+	height: 0.86rem;
+}
+.reg-content-phone input{
+	background: #EDF2F5;
+	font-size:0.28rem;
+	font-family:Microsoft YaHei;
+	font-weight:400;
+	line-height:0.37rem;
+	color:rgba(158,158,158,1);
+	opacity:1;
+	border: 1px solid rgba(112,112,112,0);
+}
+
+.reg-content-emailMak{
+	width: 100%;
+	height: 0.86rem;
+	text-align: left;
+	margin-top: 0.32rem;
+}
+.reg-content-ImgMak{
+	width: 100%;
+	height: 0.86rem;
+	margin-top: 0.32rem;
+}
+.reg-content-emailMak .Sms-Verification{
+	width: 3.8rem;
+	font-size:0.28rem;
+	font-family:Microsoft YaHei;
+	font-weight:400;
+	line-height:0.37rem;
+	color:rgba(158,158,158,1);
+	opacity:1;
+	background: #EDF2F5;
+	border: 1px solid rgba(112,112,112,0);
+	
+}
+.reg-content-emailMak .Verification-Code{
+	width:1.96rem;
+	height:0.86rem;
+	border:1px solid rgba(112,112,112,0);
+	background:linear-gradient(271deg,rgba(60,109,149,1) 0%,rgba(82,131,161,1) 100%);
+	opacity:1;
+	border-radius:8px;
+	font-size:0.28rem;
+	font-family:Microsoft YaHei;
+	font-weight:400;
+	line-height:0.37rem;
+	color:rgba(255,255,255,1);
+	opacity:1;
+	float: right;
+	border: 1px solid rgba(112,112,112,0);
+}
+
+.reg-content-ImgMak .Sms-Verification{
+	width:3.80rem;
+	height:0.86rem;
+	background:rgba(236,241,245,1);
+	border:1px solid rgba(112,112,112,0);
+	opacity:1;
+	border-radius:8px;
+	font-size:0.28rem;
+	font-family:Microsoft YaHei;
+	font-weight:400;
+	line-height:0.37rem;
+	color:rgba(158,158,158,1);
+	opacity:1;
+}
+.Verification-Code-img{
+	width:1.96rem;
+	height:0.84rem;
+	background:rgba(0,0,0,0);
+	opacity:1;
+	vertical-align: middle;
+}
+
+.reg-content-submit{
+	width:6rem;
+	height:0.86rem;
+	border:1px solid rgba(112,112,112,0);
+	background:linear-gradient(270deg,rgba(60,109,149,1) 0%,rgba(82,131,161,1) 100%);
+	opacity:1;
+	border-radius:100px;
+	font-size:0.36rem;
+	font-family:PingFang SC;
+	font-weight:300;
+	line-height:0.86rem;
+	color:rgba(255,255,255,1);
+	opacity:1;
+	text-align: center;
+	margin-top: 0.72rem;
+}
+.reg-content-Agreement{
+	width: 100%;
+	font-size:0.24rem;
+	font-family:Microsoft YaHei;
+	font-weight:400;
+	line-height:0.31rem;
+	color:rgba(28,28,28,1);
+	opacity:1;
+	text-align: center;
+	margin-top: 0.24rem;
+	margin-bottom: 0.58rem;
+}
+.reg-content-Agreement input[type=checkbox]{
+	position: inherit;
+	right: 0;
+	top: 0;
+	width: 0.24rem;
+	height: 0.24rem;
+}
+.mui-checkbox input[type=checkbox]:before, .mui-radio input[type=radio]:before{
+	font-size: 0.28rem;
+}

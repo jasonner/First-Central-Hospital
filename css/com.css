@@ -1,0 +1,47 @@
+html,body{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	background: #FAFAFA;
+}
+.mui-bar-footer{
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	background: #F9F9F9;
+	border-top: 1px solid #dfdfdf;
+}
+.mui-bar-footer div{
+	flex: auto;
+	text-align: center;
+}
+.mui-bar-footer div p{
+	margin-bottom: 0.1rem;
+}
+.mui-bar-footer div img{
+	width:0.53rem;
+	height:0.48rem;
+	margin-top: 0.11rem;
+}
+.mui-footer-color{
+	font-size:0.2rem;
+	font-family:PingFang SC;
+	font-weight:300;
+	line-height:0.28rem;
+	color:rgba(206,206,206,1);
+	opacity:1;
+}
+.mui-footer-color-active{
+	font-size:0.2rem;
+	font-family:PingFang SC;
+	font-weight:400;
+	line-height:0.28rem;
+	color:rgba(66,115,152,1);
+	opacity:1;
+}
+.mui-checkbox input[type=checkbox]:checked:before, .mui-radio input[type=radio]:checked:before {
+	color: #3E6F96;
+}

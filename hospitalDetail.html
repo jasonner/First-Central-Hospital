@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>医院详情</title>
+		<link href="css/mui.min.css" rel="stylesheet"/>
+		<link rel="stylesheet" type="text/css" href="css/font/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/com.css"/>
+		<link rel="stylesheet" type="text/css" href="css/hospitalDetail.css"/>
+	</head>
+	<body>
+		<script type="text/javascript">
+			(function (doc, win) {
+		    // 分辨率Resolution适配
+		    var docEl = doc.documentElement,
+	        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	        recalc = function () {
+	            var clientWidth = docEl.clientWidth;
+	            if (!clientWidth) return;
+	            docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+	        };
+		    // Abort if browser does not support addEventListener
+		    if (!doc.addEventListener) return;
+		    win.addEventListener(resizeEvt, recalc, false);
+		    doc.addEventListener('DOMContentLoaded', recalc, false);
+		    
+		    // 一物理像素在不同屏幕的显示效果不一样。要根据devicePixelRatio来修改meta标签的scale,要注释上面的meta标签
+		    (function(){
+	        	return;
+	        	var dpr = scale =1;
+	         	var isIPhone = win.navigator.appVersion.match(/iphone/gi);
+	        	var devicePixelRatio = win.devicePixelRatio;
+		        if (isIPhone) {
+		            // iOS下，对于2和3的屏，用2倍的方案，其余的用1倍方案
+		            if (devicePixelRatio >= 3 && (!dpr || dpr >= 3)) {                
+		                dpr = 3;
+		            } else if (devicePixelRatio >= 2 && (!dpr || dpr >= 2)){
+		                dpr = 2;
+		            } else {
+		                dpr = 1;
+		            }
+		        } else {
+		            // 其他设备下，仍旧使用1倍的方案
+		            dpr = 1;
+		        }
+	          	 scale = 1 / dpr;
+	           
+	           	// 
+	          	var metaEl = "";
+	           	metaEl = doc.createElement('meta');
+	       		metaEl.setAttribute('name', 'viewport');
+		        metaEl.setAttribute('content', 'initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+		        if (docEl.firstElementChild) {
+		            docEl.firstElementChild.appendChild(metaEl);
+		        } else {
+		            var wrap = doc.createElement('div');
+		            wrap.appendChild(metaEl);
+		            doc.write(wrap.innerHTML);
+		        }
+	    	})();
+		        
+			})(document, window);
+		</script>
+		<div class="mui-content">
+			<!--背景图片-->
+			<div class="mui-background-box">
+				<img src="img/header_12.png"/>
+			</div>
+			
+			<!--医院介绍-->
+			<div class="mui-hospital-introduce">
+				
+				<div class="mui-hospital">
+					<h2>天津市第一中心医院</h2>
+					<p><span class="icon iconfont icon-gongzuodidian"></span>天津市南开区康复路24号</p>
+				</div>
+				
+				<div class='mui-hospital-class'>
+					<span>三甲等</span>
+				</div>
+				
+			</div>
+			
+			<div class="mui-hospital-text">
+				<p>中国人民解放军总医院（301医院）创建于1953年，是集医疗，保健，教学，科研于一体的大型现代化综合性医院。
+				  医院是中央重要保健基地，承担军委，总部等多个多媒体单位，官兵的医疗保健和各军区，军兵种转诊，后送的疑难病诊治任务。
+				 医院同时又是解放军医学院，以研究生教育为主，是全军唯一一所医院办学单位。		
+				</p>
+			</div>
+		</div>
+		
+		<!--下一步-->
+		<footer id="next-step" class="next-step">
+			 <a href="departmentSelection.html" style="color: #fff;">下一步</a>
+		</footer>
+	</body>
+</html>

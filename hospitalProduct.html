@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>预约</title>
+		<link href="css/mui.min.css" rel="stylesheet"/>
+		<link rel="stylesheet" type="text/css" href="css/com.css"/>
+		<link rel="stylesheet" type="text/css" href="css/font/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/hospitalProduct.css"/>
+	</head>
+	<body>
+		<script type="text/javascript">
+			(function (doc, win) {
+		    // 分辨率Resolution适配
+		    var docEl = doc.documentElement,
+	        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	        recalc = function () {
+	            var clientWidth = docEl.clientWidth;
+	            if (!clientWidth) return;
+	            docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+	        };
+		    // Abort if browser does not support addEventListener
+		    if (!doc.addEventListener) return;
+		    win.addEventListener(resizeEvt, recalc, false);
+		    doc.addEventListener('DOMContentLoaded', recalc, false);
+		    
+		    // 一物理像素在不同屏幕的显示效果不一样。要根据devicePixelRatio来修改meta标签的scale,要注释上面的meta标签
+		    (function(){
+	        	return;
+	        	var dpr = scale =1;
+	         	var isIPhone = win.navigator.appVersion.match(/iphone/gi);
+	        	var devicePixelRatio = win.devicePixelRatio;
+		        if (isIPhone) {
+		            // iOS下，对于2和3的屏，用2倍的方案，其余的用1倍方案
+		            if (devicePixelRatio >= 3 && (!dpr || dpr >= 3)) {                
+		                dpr = 3;
+		            } else if (devicePixelRatio >= 2 && (!dpr || dpr >= 2)){
+		                dpr = 2;
+		            } else {
+		                dpr = 1;
+		            }
+		        } else {
+		            // 其他设备下，仍旧使用1倍的方案
+		            dpr = 1;
+		        }
+	          	 scale = 1 / dpr;
+	           
+	           	// 
+	          	var metaEl = "";
+	           	metaEl = doc.createElement('meta');
+	       		metaEl.setAttribute('name', 'viewport');
+		        metaEl.setAttribute('content', 'initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+		        if (docEl.firstElementChild) {
+		            docEl.firstElementChild.appendChild(metaEl);
+		        } else {
+		            var wrap = doc.createElement('div');
+		            wrap.appendChild(metaEl);
+		            doc.write(wrap.innerHTML);
+		        }
+	    	})();
+		        
+			})(document, window);
+		</script>
+		<div class="mui-content">
+			
+			<!--搜索-->
+			<form class="mui-input-group">
+			    <div class="mui-input-row">
+			        <label><span class="mui-icon mui-icon-search"></span></label>
+			        <input type="text" class="mui-input-clear" placeholder="输入您要搜索的医院名称">
+			    </div>
+			</form>
+			
+			<!--医院列表-->
+			<div class="product-list">
+				<ul class="mui-table-view">
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="hospitalDetail.html">
+				            <img class="mui-media-object mui-pull-left" src="img/product/Hospital.png">
+				            <div class="mui-media-body">
+				                天津市第一中心医院
+				                <p class='mui-ellipsis hospital-grade'><span>三甲等</span></p>
+				                 <p class='mui-ellipsis  mui-hospital-introduce-text'><span class="icon iconfont icon-gongzuodidian"></span>天津市南开区复康路24号</p>
+				            </div>
+				        </a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="hospitalDetail.html">
+				            <img class="mui-media-object mui-pull-left" src="img/product/Hospital.png">
+				            <div class="mui-media-body">
+				                天津市第一中心医院
+				                <p class='mui-ellipsis hospital-grade'><span>三甲等</span></p>
+				                 <p class='mui-ellipsis  mui-hospital-introduce-text'><span class="icon iconfont icon-gongzuodidian"></span>天津市南开区复康路24号</p>
+				            </div>
+				        </a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="hospitalDetail.html">
+				            <img class="mui-media-object mui-pull-left" src="img/product/Hospital.png">
+				            <div class="mui-media-body">
+				                天津市第一中心医院
+				                <p class='mui-ellipsis hospital-grade'><span>三甲等</span></p>
+				                 <p class='mui-ellipsis  mui-hospital-introduce-text'><span class="icon iconfont icon-gongzuodidian"></span>天津市南开区复康路24号</p>
+				            </div>
+				        </a>
+				    </li>
+				</ul>
+			</div>
+			
+			<!--尾部-->
+			<footer class="mui-bar-footer">
+				<div>
+					<a href="index.html">
+						<p><img src="img/footer/indexN.png"/></p>
+						<p class="mui-footer-color">首页</p>
+					</a>
+				</div>
+				<div>
+					<p><img src="img/footer/clock.png"/></p>
+					<p class="mui-footer-color-active">预约</p>
+				</div>
+				<div>
+					<a href="my.html">
+						<p><img src="img/footer/myN.png"/></p>
+						<p class="mui-footer-color">我的</p>
+					</a>
+				</div>
+			</footer>
+			
+		</div>
+		
+	</body>
+</html>

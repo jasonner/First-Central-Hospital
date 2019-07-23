@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>医生详情</title>
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/com.css"/>
+		<link rel="stylesheet" type="text/css" href="css/docDetail.css"/>
+	</head>
+	<body>
+		<script type="text/javascript">
+			(function (doc, win) {
+		    // 分辨率Resolution适配
+		    var docEl = doc.documentElement,
+	        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	        recalc = function () {
+	            var clientWidth = docEl.clientWidth;
+	            if (!clientWidth) return;
+	            docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+	        };
+		    // Abort if browser does not support addEventListener
+		    if (!doc.addEventListener) return;
+		    win.addEventListener(resizeEvt, recalc, false);
+		    doc.addEventListener('DOMContentLoaded', recalc, false);
+		    
+		    // 一物理像素在不同屏幕的显示效果不一样。要根据devicePixelRatio来修改meta标签的scale,要注释上面的meta标签
+		    (function(){
+	        	return;
+	        	var dpr = scale =1;
+	         	var isIPhone = win.navigator.appVersion.match(/iphone/gi);
+	        	var devicePixelRatio = win.devicePixelRatio;
+		        if (isIPhone) {
+		            // iOS下，对于2和3的屏，用2倍的方案，其余的用1倍方案
+		            if (devicePixelRatio >= 3 && (!dpr || dpr >= 3)) {                
+		                dpr = 3;
+		            } else if (devicePixelRatio >= 2 && (!dpr || dpr >= 2)){
+		                dpr = 2;
+		            } else {
+		                dpr = 1;
+		            }
+		        } else {
+		            // 其他设备下，仍旧使用1倍的方案
+		            dpr = 1;
+		        }
+	          	 scale = 1 / dpr;
+	           
+	           	// 
+	          	var metaEl = "";
+	           	metaEl = doc.createElement('meta');
+	       		metaEl.setAttribute('name', 'viewport');
+		        metaEl.setAttribute('content', 'initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+		        if (docEl.firstElementChild) {
+		            docEl.firstElementChild.appendChild(metaEl);
+		        } else {
+		            var wrap = doc.createElement('div');
+		            wrap.appendChild(metaEl);
+		            doc.write(wrap.innerHTML);
+		        }
+	    	})();
+		        
+			})(document, window);
+		</script>
+		<div class="mui-content">
+			<!--医生头像-->
+			<div class="mui-user-header">
+				<img src="img/Doctor/doctor02.png"/>
+			</div>
+			
+			<!--医生简介-->
+			<div class="mui-doc-introduce">
+				<h3>医生简介</h3>
+				
+				<div class="mui-doc-name">
+					<p>王魏<span>主任医生</span></p>
+					<p>主任门诊</p>
+				</div>
+				
+				<div class="mui-doc-user-introduce">
+					<p>
+						杨苏安，女，主任医生，教授，妇产科主任，湖南省医学会理事，湖南省妇产科学会委员，湖南省肿瘤学会委员，湖南省围产医学会委员，
+						湖南省围产医学会委员，湖南省医学会医疗事故技术鉴定专家库成员，长沙市医学会常务理事，长沙市医学会妇科分会主委，长沙市医学会
+						医疗事故技术鉴定专家库成员，国际妇产科联盟会员，长沙市孕产妇死亡评委专家组成成员，中国药文化研究会现代医药委员会全国委员，
+						美国国立医学研究中心访问学者。
+					</p>
+				</div>
+				
+				<!--预约-->
+				<div class="make-an-appointment">
+					<a href="timeAppointment.html" style="color: #fff;">预约</a>	
+				</div>
+				
+			</div>
+			
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>首页</title>
+    <script src="js/lib/jquery-3.1.1.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/com.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+</head>
+<body>
+	<script type="text/javascript">
+		(function (doc, win) {
+	    // 分辨率Resolution适配
+	    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+            var clientWidth = docEl.clientWidth;
+            if (!clientWidth) return;
+            docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+        };
+	    // Abort if browser does not support addEventListener
+	    if (!doc.addEventListener) return;
+	    win.addEventListener(resizeEvt, recalc, false);
+	    doc.addEventListener('DOMContentLoaded', recalc, false);
+	    
+	    // 一物理像素在不同屏幕的显示效果不一样。要根据devicePixelRatio来修改meta标签的scale,要注释上面的meta标签
+	    (function(){
+        	return;
+        	var dpr = scale =1;
+         	var isIPhone = win.navigator.appVersion.match(/iphone/gi);
+        	var devicePixelRatio = win.devicePixelRatio;
+	        if (isIPhone) {
+	            // iOS下，对于2和3的屏，用2倍的方案，其余的用1倍方案
+	            if (devicePixelRatio >= 3 && (!dpr || dpr >= 3)) {                
+	                dpr = 3;
+	            } else if (devicePixelRatio >= 2 && (!dpr || dpr >= 2)){
+	                dpr = 2;
+	            } else {
+	                dpr = 1;
+	            }
+	        } else {
+	            // 其他设备下，仍旧使用1倍的方案
+	            dpr = 1;
+	        }
+          	 scale = 1 / dpr;
+           
+           	// 
+          	var metaEl = "";
+           	metaEl = doc.createElement('meta');
+       		metaEl.setAttribute('name', 'viewport');
+	        metaEl.setAttribute('content', 'initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+	        if (docEl.firstElementChild) {
+	            docEl.firstElementChild.appendChild(metaEl);
+	        } else {
+	            var wrap = doc.createElement('div');
+	            wrap.appendChild(metaEl);
+	            doc.write(wrap.innerHTML);
+	        }
+    	})();
+	        
+		})(document, window);
+	</script>
+	<div class="mui-content">
+		
+		<!--轮播-->
+	 	<!--<div class="mui-slider">
+		  <div class="mui-slider-group mui-slider-loop">
+		    <!--支持循环，需要重复图片节点-->
+		    <!--<div class="mui-slider-item"><a href="#"><img src="img/index/ban1.png" /></a></div>
+		    <div class="mui-slider-item"><a href="#"><img src="img/header_2.png" /></a></div>
+		    <div class="mui-slider-item"><a href="#"><img src="img/header_10.png" /></a></div>
+		    <div class="mui-slider-item"><a href="#"><img src="img/header_12.png" /></a></div>
+		  </div>
+		</div>-->
+
+		<div id="slider" class="mui-slider" >
+		    <div class="mui-slider-group mui-slider-loop" id="stul">
+		        <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+		             <div class="mui-slider-item mui-slider-item-duplicate">
+		                     <a href="#">
+		                          <img src="img/index/ban4.png">
+		                     </a>
+		             </div>
+		               <!-- 第一张 -->
+		               <div class="mui-slider-item">
+		                     <a href="#">
+		                    <img src="img/index/ban1.png">
+		                     </a>
+		              </div>
+		            <!-- 第二张 -->
+		               <div class="mui-slider-item">
+		                    <a href="#">
+		                         <img src="img/index/ban2.png">
+		                   </a>
+		              </div>
+		            <!-- 第三张 -->
+		             <div class="mui-slider-item">
+		                  <a href="#">
+		                     <img src="img/index/ban3.png">
+		                  </a>
+		             </div>
+		            <!-- 第四张 -->
+		            <div class="mui-slider-item">
+		                  <a href="#">
+		                    <img src="img/index/ban4.png">
+		                    </a>
+		             </div>
+		            <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+		             <div class="mui-slider-item mui-slider-item-duplicate">
+		                  <a href="#">
+		                     <img src="img/index/ban1.png">
+		                   </a>
+		             </div>
+		     </div>
+		    <div class="mui-slider-indicator" id="sliin">
+		        <div class="mui-indicator mui-active"></div>
+		        <div class="mui-indicator"></div>
+		        <div class="mui-indicator"></div>
+		         <div class="mui-indicator"></div>
+		    </div>
+		</div>
+
+		<!--slider-->
+		<!--<div class="mui-slider-cell">
+			<span class="mui-slider-cell-activ"></span>
+			<span></span>
+			<span></span>
+		</div>-->
+		
+		<!--格栅-->
+	    <div class="mui-row">
+	        <div class="mui-col-sm" >
+	        	<a href="productDetail.html">
+	        		<div>
+		        		<img src="img/index/proN01.png"/>
+		        	</div>
+		           	<div class="mui-product-title">
+		           		矫正用耳模型
+		           	</div>
+		           	<div class="mui-product-text">
+		           		产品说明产品说明产品说明产品说明产品说明
+		           	</div>
+	        	</a>
+	        </div>
+	        
+	        <div class="mui-col-sm">
+	        	<a href="productDetail.html">
+		            <div><img src="img/index/proN01.png"/></div>
+		            <div class="mui-product-title">
+		           		小儿畸形整形手术（5...
+		           	</div>
+		           	<div class="mui-product-text">
+		           		产品说明产品说明产品说明产品说明产品说明
+		           	</div>
+	           </a>
+	        </div>
+	        
+	        <div class="mui-col-sm">
+	        	<a href="productDetail.html">
+		            <div><img src="img/index/pro01.png"/></div>
+		            <div class="mui-product-title">
+		           		助听器
+		           	</div>
+		           	<div class="mui-product-text">
+		           		产品说明产品说明产品说明产品说明产品说明
+		           	</div>
+	           </a>
+	        </div>
+	        
+	        <div class="mui-col-sm">
+	        	<a href="productDetail.html">
+		        	<div>
+		        		<img src="img/index/pro02.png"/>
+		        	</div>
+		            <div class="mui-product-title">
+		           		耳蜗
+		           	</div>
+		           	<div class="mui-product-text">
+		           		产品说明产品说明产品说明产品说明产品说明
+		           	</div>
+		        </a>   	
+	        </div>
+	        
+	    </div>
+	
+		<!--加载更多-->
+		<div class="loading-more">
+			加载完毕！
+		</div>
+	</div>
+	
+	<!--尾部-->
+	<footer class="mui-bar-footer">
+		<div>
+			<p><img src="img/footer/index.png"/></p>
+			<p class="mui-footer-color-active">首页</p>
+		</div>
+		<div>
+			<a href="hospitalProduct.html">
+				<p><img src="img/footer/clockN.png"/></p>
+				<p class="mui-footer-color">预约</p>
+			</a>
+		</div>
+		<div>
+			<a href="my.html">
+				<p><img src="img/footer/myN.png"/></p>
+				<p class="mui-footer-color">我的</p>
+			</a>	
+		</div>
+	</footer>
+</body>
+</html>
+<script src="js/lib/mui.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+  	mui.init();    
+    var gallery = mui('.mui-slider');
+    gallery.slider({
+      interval:2000//自动轮播周期，若为0则不自动播放，默认为0；
+    });
+</script>

@@ -1,0 +1,121 @@
+.mui-content{
+	width: 100%;
+	background: #FAFAFA;
+}
+.mui-user-header {
+	text-align: center;
+	position: relative;
+	height: 1.2rem;
+}
+.mui-user-header img{
+	position: absolute;
+	top: 0.4rem;
+	left: 2.8rem;
+	width: 1.6rem;
+	height: 1.6rem;
+	border-radius: 100%;
+	border:1px solid rgba(112,112,112,0);
+	box-shadow:0px 3px 24px rgba(0,0,0,0.16);
+}
+.mui-doc-introduce{
+	width:7.02rem;
+	height:10.06rem;
+	background:rgba(255,255,255,1);
+	border:1px solid rgba(112,112,112,0);
+	box-shadow:0px 12px 48px rgba(93,93,93,0.16);
+	opacity:1;
+	border-radius:8px;
+	margin: 0 auto;
+	padding: 0 0.32rem;
+	box-sizing: border-box;
+}
+.mui-doc-introduce h3{
+	font-size:0.32rem;
+	font-family:Microsoft YaHei;
+	font-weight:400;
+	line-height:0.42rem;
+	color:rgba(63,112,150,1);
+	opacity:1;
+	margin-top: 1.12rem;
+}
+.mui-doc-name{
+	width: 100%;
+	border-top:1px solid rgba(238,238,238,1);
+	display: flex;
+	margin-top: 0.32rem;
+}
+.mui-doc-name p{
+	flex: 1;
+}
+.mui-doc-name p:nth-of-type(1){
+	font-size:0.32rem;
+	font-family:Microsoft YaHei;
+	font-weight:400;
+	line-height:0.42rem;
+	color:rgba(0,0,0,1);
+	opacity:1;
+	margin-top: 0.32rem;
+}
+.mui-doc-name p:nth-of-type(1) span{
+	display: inline-block;
+	text-align: center;
+	width:1rem;
+	height:0.4rem;
+	margin-left: 0.24rem;
+	margin-top: 0.32rem;
+	margin-bottom: 0.32rem;
+	background:rgba(63,112,150,0);
+	border:1px solid rgba(63,112,150,1);
+	opacity:1;
+	border-radius:4px;
+	font-size:0.20rem;
+	font-family:Microsoft YaHei;
+	font-weight:400;
+	line-height:0.35rem;
+	color:rgba(63,112,150,1);
+	opacity:1;
+}
+.mui-doc-name p:nth-of-type(2){
+	text-align: right;
+	font-size:0.24rem;
+	font-family:Microsoft YaHei;
+	font-weight:400;
+	line-height:0.75rem;
+	color:rgba(158,158,158,1);
+	opacity:1;
+	margin-top: 0.37rem;
+}
+.mui-doc-user-introduce{
+	border-top: 1px solid #efefef;
+	padding-top: 0.32rem;
+}
+.mui-doc-user-introduce p{ 
+	font-size:0.24rem;
+	font-family:Microsoft YaHei;
+	font-weight:400;
+	line-height:0.40rem;
+	color:rgba(158,158,158,1);
+	opacity:1;
+}
+.make-an-appointment{
+	width:6rem;
+	height:0.86rem;
+	border:1px solid rgba(112,112,112,0);
+	background:linear-gradient(270deg,rgba(61,110,149,1) 0%,rgba(81,130,161,1) 100%);
+	opacity:1;
+	border-radius:100px;
+	margin: 0 auto;
+	margin-top: 1.62rem;
+	text-align: center;
+	font-size:0.36rem;
+	font-family:PingFang SC;
+	font-weight:300;
+	color:rgba(255,255,255,1);
+	opacity:1;
+	line-height: 0.86rem;
+}
+.make-an-appointment a{
+	width: 100%;
+    height: 100%;
+    display: inline-block;
+}
